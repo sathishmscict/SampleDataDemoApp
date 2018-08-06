@@ -67,21 +67,8 @@ public class DemoActivity extends AppCompatActivity {
             df.setTimeZone(TimeZone.getDefault());
             String formattedDate = df.format(date);
             if (BuildConfig.DEBUG) {
-
                 Log.d(TAG, formattedDate);
             }
-
-           /* SimpleDateFormat FORMATTING_PATTERN = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-            FORMATTING_PATTERN.setTimeZone(TimeZone.getTimeZone("UTC"));
-            Date UTCdate = FORMATTING_PATTERN.parse(mWsNotification.getOnDateTime());
-            FORMATTING_PATTERN.setTimeZone(TimeZone.getDefault());
-            String formattedDate = FORMATTING_PATTERN.format(UTCdate);
-            Date Localdate = FORMATTING_PATTERN.parse(formattedDate);
-            String strDate = TimeAgo.using(Localdate.getTime());
-            mWsNotification.setStrDate(strDate);
-            temp.add(mWsNotification);
-            AppGlobal.printLog(TAG ,"Beautiful date" + strDate);*/
-
 
         } catch (ParseException e) {
             e.printStackTrace();
