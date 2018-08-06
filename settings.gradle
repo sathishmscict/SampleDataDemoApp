@@ -1,2 +1,8 @@
-include ':app',':butterknife',':butterknife-annotations',':butterknife-compiler','butterknife-lint',
-        ':butterknife-gradle-plugin'
+include ':app'
+include':butterknife'
+include':butterknife-annotations'
+include':butterknife-compiler'
+include'butterknife-lint'
+include':butterknife-gradle-plugin'
+
+rootProject.name = 'butterknife-parent'
