@@ -1,0 +1,151 @@
+apply plugin: 'com.github.ben-manes.versions'
+ext {
+
+    //Application target configuration
+    MIN_SDK_VERSION = 15
+    COMPILE_SDK_VERSION = 28
+    TARGET_SDK_VERSION = 28
+
+    //App version
+    APP_VERSION = 10
+    APP_VERSION_NAME = "1.10"
+
+    //Build version libraries
+    BUILD_TOOLS_VERSION = "27.0.3"
+    SUPPORT_LIB_VERSION = "27.1.1"
+    BUTTER_KNIFE_SUPPORT_LIB_VERSION="26.1.0-alpha09"
+
+    //Other libraries
+    MULTIDEX_LIB_VERSION ="1.0.3"
+    CONSTRAINT_LIB_VERSION = "1.0.2"
+    CRASHLYTICS_LIB_VERSION = "2.7.1@aar"
+    FIREBASE_LIB_VERSION = "17.1.0"
+    LOCATION_LIB_VERSION = "15.0.1"
+    BUTTER_KNIFE_LIB_VERSION = "8.8.1.1"
+    TED_LIB_VERSION = "2.1.0"
+    UNIVERSAL_IMAGE_LOADER = "1.9.5"
+    JACKSON_LIB_VERSION = "2.7.2"
+    TESTING_LIB_VERSION = "1.0.1"
+    JUNIT_LIB_VERSION = "4.12"
+    HTTP_MIME_LIB_VERSION = "4.2.3"
+    JSOUP_LIB_VERSION = "1.9.1"
+    GSON_LIB_VERSION = "2.8.2"
+    DROPPY_LIB_VERSION = "0.6.0"
+    CIRCULAR_SEEK_BAR_VERSION = "1.1.4"
+    CIRCULAR_INDICATOR_VERSION = "1.2.2@aar"
+    AUTOFIT_TEXTVIEW_VERSION = "0.2.1"
+    DEBUG_DB_VERSION = "1.0.1"
+    SHAPE_IMAGE_VERSION = "0.9.4.2"
+    KEYBOARD_VISIBILITY_EVENT = "2.1.0"
+    ZCWENG_SWITCH_BUTTON = "0.0.3@aar"
+    CIRCLE_PROGRESSBAR_LIB_VERSION = "2.0.1"
+    CUSTOM_SEEKBAR_LIB_VERSION="1.2.9"
+    LOTTI_LIB_VERSION="2.5.5"
+    GOOGLE_TRUTH_LIB_VERSION="0.39"
+    COMPILE_TESTING_LIB_VERSION="0.15"
+    SUPPORT_TEST_LIB_VERSION="1.0.1"
+    GOOGLE_ANDROID_LIB_VERSION="4.1.1.4"
+    JAVA_POET_LIB_VERSION="1.10.0"
+    GOOGLE_AUTO_LIB_VERSION="0.10"
+    GUAVA_LIB_VERSION="24.0-jre"
+    GOOGLE_AUTO_SERVICE_LIB_VERSION="1.0-rc4"
+
+}
+buildscript {
+   /* ext.versions = [
+            'minSdk': 14,
+            'compileSdk': 27,
+
+            'supportLibrary': '27.0.2',
+            'androidPlugin': '3.1.3',
+            'androidTools': '26.1.0-alpha09',
+            'kotlin': '1.2.21',
+
+            'release': '8.8.1',
+    ]
+
+    ext.deps = [
+            android: [
+                    'runtime': 'com.google.android:android:4.1.1.4',
+                    'gradlePlugin': "com.android.tools.build:gradle:${versions.androidPlugin}",
+            ],
+            'support': [
+                    'compat': "com.android.support:support-compat:${versions.supportLibrary}",
+                    'annotations': "com.android.support:support-annotations:${versions.supportLibrary}",
+                    'test': [
+                            'runner': 'com.android.support.test:runner:1.0.1',
+                    ],
+            ],
+            'lint': [
+                    'core': "com.android.tools.lint:lint:${versions.androidTools}",
+                    'api': "com.android.tools.lint:lint-api:${versions.androidTools}",
+                    'checks': "com.android.tools.lint:lint-checks:${versions.androidTools}",
+                    'tests': "com.android.tools.lint:lint-tests:${versions.androidTools}",
+            ],
+            javapoet: 'com.squareup:javapoet:1.10.0',
+            javaparser: 'com.github.javaparser:javaparser-core:3.5.14',
+            junit: 'junit:junit:4.12',
+            truth: 'com.google.truth:truth:0.39',
+            robolectric: 'org.robolectric:robolectric:3.7.1',
+            compiletesting: 'com.google.testing.compile:compile-testing:0.15',
+            'auto': [
+                    'service': 'com.google.auto.service:auto-service:1.0-rc4',
+                    'common': 'com.google.auto:auto-common:0.10',
+            ],
+            'guava': 'com.google.guava:guava:24.0-jre',
+            'release': [
+                    'runtime': "com.jakewharton:butterknife:${versions.release}",
+                    'compiler': "com.jakewharton:butterknife-compiler:${versions.release}"
+            ],
+            'kotlin': [
+                    'stdLibJre8': "org.jetbrains.kotlin:kotlin-stdlib-jre8:${versions.kotlin}",
+            ]
+    ]*/
+
+    repositories {
+        mavenCentral()
+        jcenter()
+        google()
+        maven { url 'https://jitpack.io' }
+    }
+
+    dependencies {
+        /*classpath deps.android.gradlePlugin
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"*/
+        classpath "com.android.tools.build:gradle:3.1.3"
+        /*classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.50"*/
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.17.0'
+    }
+}
+
+subprojects { project ->
+    group = GROUP
+    version = VERSION_NAME
+
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+
+    if (!project.name.equals('butterknife-gradle-plugin')) {
+        apply plugin: 'checkstyle'
+
+        task checkstyle(type: Checkstyle) {
+            configFile rootProject.file('checkstyle.xml')
+            source 'src/main/java'
+            ignoreFailures false
+            showViolations true
+            include '**/*.java'
+
+            classpath = files()
+        }
+
+        afterEvaluate {
+            if (project.tasks.findByName('check')) {
+                check.dependsOn('checkstyle')
+            }
+        }
+    }
+}

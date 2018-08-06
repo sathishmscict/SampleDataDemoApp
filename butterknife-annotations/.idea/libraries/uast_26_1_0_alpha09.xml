@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="uast-26.1.0-alpha09">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.external.org-jetbrains/uast/26.1.0-alpha09/d0c52f6ece1cdc47bcbaf66a0636635b826219ee/uast-26.1.0-alpha09.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.external.org-jetbrains/uast/26.1.0-alpha09/646d390118146466a341de8979b59e6431cc36db/uast-26.1.0-alpha09-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

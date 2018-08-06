@@ -1,0 +1,38 @@
+apply plugin: 'java-library'
+apply plugin: 'checkstyle'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+
+  compileOnly "com.android.tools.lint:lint-api:${BUTTER_KNIFE_SUPPORT_LIB_VERSION}"
+  compileOnly "com.android.tools.lint:lint-checks:${BUTTER_KNIFE_SUPPORT_LIB_VERSION}"
+  testImplementation "junit:junit:${JUNIT_LIB_VERSION}"
+  testImplementation "com.android.tools.lint:lint:${BUTTER_KNIFE_SUPPORT_LIB_VERSION}"
+  testImplementation "com.android.tools.lint:lint-tests:${BUTTER_KNIFE_SUPPORT_LIB_VERSION}"
+  testImplementation("com.google.truth:truth:${GOOGLE_TRUTH_LIB_VERSION}") {
+    exclude group: 'com.google.guava', module: 'guava'
+  }
+
+/*  compileOnly deps.lint.api
+  compileOnly deps.lint.checks
+  testImplementation deps.junit
+  testImplementation deps.lint.core
+  testImplementation deps.lint.tests
+  testImplementation(deps.truth) {
+    exclude group: 'com.google.guava', module: 'guava'
+  }*/
+}
+
+jar {
+  manifest {
+    attributes 'Lint-Registry-v2': 'butterknife.lint.LintRegistry'
+  }
+}
+
+checkstyle {
+  configFile rootProject.file('checkstyle.xml')
+  showViolations true
+  sourceSets = [sourceSets.main]
+}

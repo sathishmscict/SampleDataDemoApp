@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="butterknife-lint.butterknife-lint-9.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../butterknife-lint/build/libs/butterknife-lint-9.0.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

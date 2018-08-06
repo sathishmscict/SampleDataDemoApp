@@ -1,0 +1,41 @@
+apply plugin: 'java-gradle-plugin'
+/*apply plugin: 'kotlin'*/
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+configurations {
+  fixtureClasspath
+}
+// Append any extra dependencies to the test fixtures via a custom configuration classpath. This
+// allows us to apply additional plugins in a fixture while still leveraging dependency resolution
+// and de-duplication semantics.
+def metadata = tasks.getByName('pluginUnderTestMetadata')
+metadata.setPluginClasspath(metadata.getPluginClasspath() + configurations.fixtureClasspath)
+
+dependencies {
+  compileOnly gradleApi()
+
+    implementation "com.android.tools.build:gradle:3.1.3"
+    implementation "com.github.javaparser:javaparser-core:3.5.14"
+    implementation "com.squareup:javapoet:${JAVA_POET_LIB_VERSION}"
+    /*implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.21"*/
+
+    testImplementation "junit:junit:${JUNIT_LIB_VERSION}"
+    testImplementation "com.google.truth:truth:${GOOGLE_TRUTH_LIB_VERSION}"
+    testImplementation "com.android.support:support-annotations:${SUPPORT_LIB_VERSION}"
+    testImplementation "com.google.testing.compile:compile-testing:${COMPILE_TESTING_LIB_VERSION}"
+
+
+  /*implementation deps.android.gradlePlugin
+  implementation deps.javaparser
+  implementation deps.javapoet
+  implementation deps.kotlin.stdLibJre8
+
+  testImplementation deps.junit
+  testImplementation deps.truth
+  testImplementation deps.support.annotations
+  testImplementation deps.compiletesting*/
+}
+
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

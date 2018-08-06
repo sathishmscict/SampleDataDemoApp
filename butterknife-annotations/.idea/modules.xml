@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../butterknife/butterknife.iml" filepath="$PROJECT_DIR$/../butterknife/butterknife.iml" />
+      <module fileurl="file://$PROJECT_DIR$/butterknife-annotations.iml" filepath="$PROJECT_DIR$/butterknife-annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../butterknife-compiler/butterknife-compiler.iml" filepath="$PROJECT_DIR$/../butterknife-compiler/butterknife-compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../butterknife-gradle-plugin/butterknife-gradle-plugin.iml" filepath="$PROJECT_DIR$/../butterknife-gradle-plugin/butterknife-gradle-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../butterknife-integration-test/butterknife-integration-test.iml" filepath="$PROJECT_DIR$/../butterknife-integration-test/butterknife-integration-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../butterknife-lint/butterknife-lint.iml" filepath="$PROJECT_DIR$/../butterknife-lint/butterknife-lint.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../butterknife-parent.iml" filepath="$PROJECT_DIR$/../butterknife-parent.iml" />
+    </modules>
+  </component>
+</project>

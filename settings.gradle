@@ -1,0 +1,2 @@
+include ':app',':butterknife',':butterknife-annotations',':butterknife-compiler','butterknife-lint',
+        ':butterknife-gradle-plugin'

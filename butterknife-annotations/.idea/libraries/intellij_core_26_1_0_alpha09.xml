@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="intellij-core-26.1.0-alpha09">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.external.com-intellij/intellij-core/26.1.0-alpha09/f85bd74d989d734a6c6e989ead5e32cb409421f3/intellij-core-26.1.0-alpha09.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.external.com-intellij/intellij-core/26.1.0-alpha09/5c76ffb2315887900ec07aa378dca515a052bded/intellij-core-26.1.0-alpha09-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

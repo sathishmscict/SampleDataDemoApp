@@ -1,0 +1,69 @@
+apply plugin: 'com.android.library'
+
+android {
+  /*  compileSdkVersion 27
+    buildToolsVersion '27.0.3'*/
+    compileSdkVersion rootProject.ext.COMPILE_SDK_VERSION
+    buildToolsVersion rootProject.ext.BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        /*minSdkVersion versions.minSdk*/
+        minSdkVersion 15
+        consumerProguardFiles 'proguard-rules.txt'
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+    }
+    lintOptions {
+        textReport true
+        textOutput 'stdout'
+        // We run a full lint analysis as build part in CI, so skip vital checks for assemble tasks.
+        checkReleaseBuilds false
+    }
+    // TODO replace with https://issuetracker.google.com/issues/72050365 once released.
+    libraryVariants.all {
+        it.generateBuildConfig.enabled = false
+    }
+}
+
+dependencies {
+    api project(':butterknife-annotations')
+    lintChecks project(':butterknife-lint')
+    androidTestAnnotationProcessor project(':butterknife-compiler')
+    testImplementation project(':butterknife-compiler')
+
+    api "com.android.support:support-compat:${SUPPORT_LIB_VERSION}"
+    androidTestImplementation "junit:junit:${JUNIT_LIB_VERSION}"
+    androidTestImplementation "com.google.truth:truth:${GOOGLE_TRUTH_LIB_VERSION}"
+    androidTestImplementation "com.android.support.test:runner:${SUPPORT_TEST_LIB_VERSION}"
+    testImplementation "junit:junit:${JUNIT_LIB_VERSION}"
+    testImplementation "com.google.truth:truth:${GOOGLE_TRUTH_LIB_VERSION}"
+    testImplementation "com.google.testing.compile:compile-testing:${COMPILE_TESTING_LIB_VERSION}"
+
+   /* api deps.support.compat
+    androidTestImplementation deps.junit
+    androidTestImplementation deps.truth
+    androidTestImplementation deps.support.test.runner
+    testImplementation deps.junit
+    testImplementation deps.truth
+    testImplementation deps.compiletesting*/
+}
+
+def getRuntimeJar() {
+  try {
+    final File javaBase = new File(System.getProperty("java.home")).getCanonicalFile();
+    File runtimeJar = new File(javaBase, "lib/rt.jar");
+    if (runtimeJar.exists()) {
+      return runtimeJar;
+    }
+    runtimeJar = new File(javaBase, "jre/lib/rt.jar");
+    return runtimeJar.exists() ? runtimeJar : null;
+  } catch (IOException e) {
+    throw new RuntimeException(e);
+  }
+}
+
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

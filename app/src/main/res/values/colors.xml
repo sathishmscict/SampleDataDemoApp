@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--  <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>-->
+
+    <color name="colorBackground">#2d3145</color>
+    <color name="colorBackground_Tra">#E62d3145</color>
+    <color name="colorBackgroundText">@color/colorBackground</color>
+    <color name="colorLoginText">#2779ff</color>
+    <color name="colorHint">#aeafaf</color>
+    <color name="colorDarkGray">#555968</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorPrimary">@color/colorBlack</color>
+    <color name="colorPrimaryDark">@color/colorBlack</color>
+    <color name="colorAccent">@color/colorWhite</color>
+    <color name="colorRatingStar">#fa4830</color>
+    <color name="colorOrange">#fa4830</color>
+    <color name="colorRegister">#222531</color>
+
+    <color name="colorTitle_Exam">@color/colorWhite</color>
+    <color name="colorSubTitle_Exam">@color/colorHint</color>
+    <color name="colorMainTitle_Exam">@color/colorWhite</color>
+    <color name="colorTitle_Nav">@color/colorWhite</color>
+    <color name="colorTitle_tip">#2d3145</color>
+
+    <color name="colorSubmenuItemText">#606066</color>
+    <color name="colorHistoryStatus_not_complete">#e70126</color>
+    <color name="colorHistoryStatus_complete">#479724</color>
+
+    <color name="colorSettingsTitle">#c1c1c1</color>
+    <color name="colorSettingsSubTitle">#3a3d4f</color>
+    <color name="colorSettingsSwitchOn">#5a78d4</color>
+    <color name="colorSettingsSwitchOff">#d7d7d7</color>
+
+    <color name="colorHistoryDetailSubtitle">@color/colorSettingsTitle</color>
+    <color name="colorHistoryDetailGame">#ff7716</color>
+    <color name="colorHistoryDetailAssessment">@color/colorHistoryStatus_complete</color>
+
+    <color name="colorArticleItemCircle">#aeafaf</color>
+    <color name="colotArticleRecItemTime">#c2c2c2</color>
+
+    <color name="colorLineDrawing">#557FFF</color>
+    <color name="colorErazer">#2d3145</color>
+    <color name="colorTextColor">#65687a</color>
+
+    <color name="colorTextWordList_blank">#e0e0e0</color>
+    <color name="colorTextWordlist_written">#838695</color>
+    <color name="colorMath_written">#FFFFFF</color>
+    <color name="colorOrientation_written">@color/colorWhite</color>
+    <color name="colorOrientation_hint">#00295f</color>
+
+    <color name="colorTextBorder">#707270</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorSequencePoint">#3c4059</color>
+    <color name="colorEraseMenu">#557FFF</color>
+    <color name="colorGrey">#e3e3e3</color>
+
+    <color name="activeProgressColor">#597deb</color>
+    <color name="deActiveProgressColor">#7b7b7b</color>
+    <color name="colorTimerBackground">#3c4059</color>
+
+    <color name="colorPregress_default">#f42525</color>
+    <color name="colorPregress_mid">#3f7be7</color>
+    <color name="colorPregress_high">#70b32f</color>
+
+    <color name="colorSubTitle">@color/colorHint</color>
+    <color name="colorTitle">@color/colorWhite</color>
+    <color name="colorEditText">#262626</color>
+    <color name="colorEditTextBorder">#515152</color>
+    <color name="colorPink">#c92145</color>
+    <color name="colorPinkDisabled">#D34D6A</color>
+    <color name="colorGreen">#64B034</color>
+    <color name="colorDarkGreen">#4F8D2A</color>
+    <color name="colorLightGreen">#7deb10</color>
+    <color name="colorBlackTransparent">#4D000000</color>
+    <color name="colorBlackTransparent70">#B3000000</color>
+    <color name="colorGreenDisable">#a2cf85</color>
+    <color name="colorBlackTransparent50">#DD000000</color>
+    <color name="colorBlackTransparent80">#26000000</color>
+    <color name="colorTransparent">#00000000</color>
+
+    <color name="colorSidemenuTitle">@color/colorBackground</color>
+    <color name="colorsidemenu_edit_text_Grey">#d8d8d8</color>
+
+
+    <color name="colorSequencePointSelected">#12CE22</color>
+    <color name="colorSequenceName">@color/colorTitle</color>
+
+    <color name="colorMain">#F06292</color>
+    <color name="colorMainDisable">#F6A9C3</color>
+    <color name="colorEtHint">#9E9E9E</color>
+    <color name="colorSubFeelingBackground">#BF000000</color>
+
+    <!-- Material Color Codes -->
+    <color name="colorMaterialRed">#D32F2F</color>
+    <color name="colorMaterialPurple">#7B1FA2</color>
+    <color name="colorMaterialIndigo">#303F9F</color>
+    <color name="colorMaterialCyan">#0097A7</color>
+    <color name="colorMaterialTeal">#00796B</color>
+    <color name="colorMaterialGreen">#388E3C</color>
+    <color name="colorMaterialLime">#A4B42B</color>
+    <color name="colorMaterialYellow">#FBC02D</color>
+    <color name="colorMaterialAmber">#FFA000</color>
+    <color name="colorMaterialBrown">#5D4037</color>
+    <color name="colorMaterialBGray">#455A64</color>
+    <color name="colorMaterialOrange">#E64A19</color>
+    <color name="colorMaterialPink">#FF00FF</color>
+    <color name="colorMaterialViolet">#7F00FF</color>
+    <color name="colorMaterialAzure">#007FFF</color>
+    <color name="colorMaterialBPink">#FF007F</color>
+    <color name="colorMaterialDPurple">#9933CC</color>
+    <color name="colorMaterialBlue">#0000FF</color>
+    <color name="colorMaterialDGreen">#4F8D2A</color>
+    <color name="colorMaterialDGray">#4f4f4f</color>
+
+
+
+    <color name="colorBlue">#42A5F5</color>
+    <color name="colorMGreen">#66BB6A</color>
+    <color name="colorYellow">#FFEE58</color>
+
+    <color name="colorBlink1">#e9a6b4</color>
+    <color name="colorBlink2">#e490a2</color>
+    <color name="colorBlink3">#de798f</color>
+    <color name="colorBlink4">#d9637c</color>
+    <color name="colorBlink5">#000000</color>
+
+    <color name="colorBlink6">#fe829f</color>
+    <color name="colorBlink7">#000000</color>
+
+
+
+    <color name="card1_bg">#557fff</color>
+    <color name="card2_bg">#3d65dd</color>
+    <color name="card3_bg">#294ebe</color>
+    <color name="card4_bg">#4b4e62</color>
+    <color name="card5_bg">#5a5c6c</color>
+    <color name="card6_bg">#757786</color>
+
+    <!--CompletedExam screen-->
+    <color name="colorCompletedProgresDefault">#3E4463</color>
+    <color name="colorVisualStart">#ffcc00</color>
+    <color name="colorVisualEnd">#ff0000</color>
+    <color name="colorAuditoryStart">#91adff</color>
+    <color name="colorAuditoryEnd">#557fff</color>
+    <color name="colorLanguageStart">#00ff38</color>
+    <color name="colorLanguageEnd">#04ab15</color>
+    <color name="colorWorkingMemoryStart">#e01982</color>
+    <color name="colorWorkingMemoryEnd">#a900ff</color>
+    <color name="colorVisualSpatialStart">#f35320</color>
+    <color name="colorVisualSpatialEnd">#d2330f</color>
+    <color name="colorNotificationSeperator">#4Df4f4f4</color>
+    <color name="colorArticalNewArticleSeperator">#4De2e2e2</color>
+    <color name="colorAssessmentSeperator">#f4f4f4</color>
+    <color name="colorCategory2">#4C54AB</color>
+    <color name="colorCategory3">#E82323</color>
+    <color name="colorCategory4">#FE9800</color>
+    <color name="colorCategory5">#4CAF50</color>
+    <color name="colorArticleAvailable">#9D9D9D</color>
+
+</resources>

@@ -1,0 +1,132 @@
+{
+  "MemberNotifications": [
+    {
+      "SrNO": 1,
+      "MemberID": 4,
+      "ID": 21,
+      "OnDateTime": "2018-07-10T11:00:00",
+      "Description": " sa   Read your congnitip of the day!",
+      "Type": "Tip",
+      "IsView": "N"
+    },
+    {
+      "SrNO": 2,
+      "MemberID": 4,
+      "ID": 15,
+      "OnDateTime": "2018-07-09T11:01:00",
+      "Description": "Read your congnitip of the day!",
+      "Type": "Tip",
+      "IsView": "Y"
+    },
+    {
+      "SrNO": 3,
+      "MemberID": 4,
+      "ID": 10,
+      "OnDateTime": "2018-07-08T11:01:00",
+      "Description": "Read your congnitip of the day!",
+      "Type": "Tip",
+      "IsView": "Y"
+    },
+    {
+      "SrNO": 4,
+      "MemberID": 4,
+      "ID": 9,
+      "OnDateTime": "2018-07-07T11:01:00",
+      "Description": "Read your congnitip of the day!",
+      "Type": "Tip",
+      "IsView": "Y"
+    },
+    {
+      "SrNO": 5,
+      "MemberID": 4,
+      "ID": 14,
+      "OnDateTime": "2018-07-06T11:00:00",
+      "Description": "Read your congnitip of the day!",
+      "Type": "Tip",
+      "IsView": "Y"
+    },
+    {
+      "SrNO": 6,
+      "MemberID": 4,
+      "ID": 18,
+      "OnDateTime": "2018-07-05T11:28:00",
+      "Description": "Read your congnitip of the day!",
+      "Type": "Tip",
+      "IsView": "Y"
+    },
+    {
+      "SrNO": 7,
+      "MemberID": 4,
+      "ID": 11,
+      "OnDateTime": "2018-07-03T11:00:00",
+      "Description": "Read your congnitip of the day!",
+      "Type": "Tip",
+      "IsView": "Y"
+    },
+    {
+      "SrNO": 8,
+      "MemberID": 4,
+      "ID": 1,
+      "OnDateTime": "2018-07-02T11:00:00",
+      "Description": "Read your congnitip of the day!",
+      "Type": "Tip",
+      "IsView": "Y"
+    },
+    {
+      "SrNO": 9,
+      "MemberID": 4,
+      "ID": 22,
+      "OnDateTime": "2018-07-01T11:00:00",
+      "Description": "Read your congnitip of the day!",
+      "Type": "Tip",
+      "IsView": "Y"
+    },
+    {
+      "SrNO": 10,
+      "MemberID": 4,
+      "ID": 7,
+      "OnDateTime": "2018-06-30T11:00:00",
+      "Description": "Read your congnitip of the day!",
+      "Type": "Tip",
+      "IsView": "Y"
+    },
+    {
+      "SrNO": 11,
+      "MemberID": 4,
+      "ID": 2,
+      "OnDateTime": "2018-06-29T11:00:00",
+      "Description": "Read your congnitip of the day!",
+      "Type": "Tip",
+      "IsView": "Y"
+    },
+    {
+      "SrNO": 12,
+      "MemberID": 4,
+      "ID": 12,
+      "OnDateTime": "2018-06-28T11:00:00",
+      "Description": "Read your congnitip of the day!",
+      "Type": "Tip",
+      "IsView": "Y"
+    },
+    {
+      "SrNO": 13,
+      "MemberID": 4,
+      "ID": 19,
+      "OnDateTime": "2018-06-27T13:50:00",
+      "Description": "Read your congnitip of the day!",
+      "Type": "Tip",
+      "IsView": "Y"
+    },
+    {
+      "SrNO": 14,
+      "MemberID": 4,
+      "ID": 6,
+      "OnDateTime": "2018-06-22T12:55:00",
+      "Description": "Read your congnitip of the day!",
+      "Type": "Tip",
+      "IsView": "Y"
+    }
+  ],
+  "ResponseCode": "0",
+  "ResponseText": "success"
+}

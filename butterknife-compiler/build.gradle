@@ -1,0 +1,34 @@
+apply plugin: 'java-library'
+apply plugin: 'checkstyle'
+
+sourceCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_7
+
+dependencies {
+  implementation project(':butterknife-annotations')
+  compileOnly files(org.gradle.internal.jvm.Jvm.current().getToolsJar())
+
+
+  implementation "com.google.auto:auto-common:${GOOGLE_AUTO_LIB_VERSION}"
+  implementation "com.google.guava:guava:${GUAVA_LIB_VERSION}"
+  api "com.squareup:javapoet:${JAVA_POET_LIB_VERSION}"
+  compileOnly "com.google.auto.service:auto-service:${GOOGLE_AUTO_SERVICE_LIB_VERSION}"
+  testImplementation "junit:junit:${JUNIT_LIB_VERSION}"
+  testImplementation "com.google.truth:truth:${GOOGLE_TRUTH_LIB_VERSION}"
+
+  /*implementation deps.auto.common
+  implementation deps.guava
+  api deps.javapoet
+  compileOnly deps.auto.service
+  testImplementation deps.junit
+  testImplementation deps.truth*/
+}
+
+checkstyle {
+  configFile rootProject.file('checkstyle.xml')
+  showViolations true
+  //Remove this when tests are less verbose, i.e. using JavaPoet
+  sourceSets = [sourceSets.main]
+}
+
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
